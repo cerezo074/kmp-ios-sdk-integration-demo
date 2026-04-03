@@ -1,0 +1,66 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Gradle / Kotlin Multiplatform / Android ---
+.gradle/
+**/.gradle/
+.kotlin/
+**/build/
+build/
+out/
+local.properties
+*.iml
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/
+*.hprof
+
+# Android packaging & signing
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+*.keystore
+!debug.keystore
+
+# --- Xcode / iOS / Swift ---
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.swiftpm/xcode/package.xcworkspace/xcuserdata/
+timeline.xctimeline
+playground.xcworkspace
+*.xcarchive
+
+# Swift Package Manager
+.build/
+
+# CocoaPods (uncomment if you commit Pods/)
+# Pods/
+
+# --- Secrets / signing (never commit) ---
+*.gpg
+*.pem
+signing.properties
+
+# Logs & local env
+*.log
+.env
+.env.*
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
