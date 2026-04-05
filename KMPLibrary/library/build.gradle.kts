@@ -1,4 +1,3 @@
-import com.android.build.api.dsl.androidLibrary
 import org.gradle.api.publish.maven.tasks.PublishToMavenLocal
 import org.gradle.plugins.signing.SigningExtension
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -23,10 +22,10 @@ kotlin {
         minSdk = libs.versions.android.minSdk.get().toInt()
 
         compilations.configureEach {
-            compilerOptions.configure {
-                jvmTarget.set(
-                    JvmTarget.JVM_11
-                )
+            compileTaskProvider.configure {
+                compilerOptions {
+                    jvmTarget.set(JvmTarget.JVM_11)
+                }
             }
         }
     }

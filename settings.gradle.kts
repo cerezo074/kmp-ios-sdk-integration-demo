@@ -11,17 +11,23 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        mavenLocal()
         google()
         mavenCentral()
     }
 }
 
-rootProject.name = "NotesApp-android"
+rootProject.name = "custom_library_cocoapods"
+
+include(":library")
+project(":library").projectDir = file("KMPLibrary/library")
+
 include(":app")
+project(":app").projectDir = file("NotesApp-android/app")
